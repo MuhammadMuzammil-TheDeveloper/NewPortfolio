@@ -68,6 +68,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./projects.css" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -129,7 +130,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="availability" href="#contact"
-          ><span aria-hidden="true"></span> Open to internships &amp; remote
+          ><span aria-hidden="true"></span> Open to internships, Jobs &amp; remote
           roles</a
         >
         <button
@@ -142,8 +143,8 @@
         </button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <a href="#about">About</a><a href="#skills">Skills</a
-          ><a href="#experience">Experience</a><a href="#projects">Projects</a
-          ><a href="#contact">Contact</a
+          ><a href="#experience">Experience</a
+          ><a href="./projects.html">Projects</a><a href="#contact">Contact</a
           ><a
             href="./assets/Muhammad-Muzammil-Resume.pdf"
             target="_blank"
@@ -279,90 +280,17 @@
             A mix of client UI builds, full-stack apps, and experiments.
           </p>
         </div>
-        <div class="project-grid">
-          <article
-            class="project-card js-project-card"
-            tabindex="0"
-            role="button"
-            aria-haspopup="dialog"
-            data-title="Hospital Management System"
-            data-tag="Desktop UI"
-            data-description="Desktop-oriented UI for managing patients, staff, and records, refined through dark and light theme iterations. Covers patient intake, staff rosters, and record-keeping views with a focus on clarity for non-technical hospital staff."
-            data-tags="React,Tailwind,UI/UX"
-            data-live=""
-            data-github="https://github.com/MuhammadMuzammil-TheDeveloper"
+
+        <!-- Featured project cards are rendered from projects-data.js via
+             home-projects.js — see that file to change which 4 appear here. -->
+        <div class="project-grid" id="home-projects-grid"></div>
+
+        <div class="view-all-wrap">
+          <a class="button button-dark" href="./projects.html"
+            >View All Projects <span aria-hidden="true">→</span></a
           >
-            <div class="project-top"><span>Desktop UI</span><b>↗</b></div>
-            <h3>Hospital Management System</h3>
-            <p>
-              Desktop-oriented UI for managing patients, staff, and records,
-              refined through dark and light theme iterations.
-            </p>
-            <div class="tags"><i>React</i><i>Tailwind</i><i>UI/UX</i></div>
-          </article>
-          <article
-            class="project-card js-project-card"
-            tabindex="0"
-            role="button"
-            aria-haspopup="dialog"
-            data-title="Supabase Storage CRUD App"
-            data-tag="Full Stack"
-            data-description="GitHub-inspired storage manager with drag-and-drop uploads, live previews, and complete CRUD flows. Built on Supabase Storage with row-level policies and instant file previews for images and documents."
-            data-tags="Next.js,Supabase,Storage API"
-            data-live=""
-            data-github="https://github.com/MuhammadMuzammil-TheDeveloper"
-          >
-            <div class="project-top"><span>Full Stack</span><b>↗</b></div>
-            <h3>Supabase Storage CRUD App</h3>
-            <p>
-              GitHub-inspired storage manager with drag-and-drop uploads, live
-              previews, and complete CRUD flows.
-            </p>
-            <div class="tags">
-              <i>Next.js</i><i>Supabase</i><i>Storage API</i>
-            </div>
-          </article>
-          <article
-            class="project-card js-project-card"
-            tabindex="0"
-            role="button"
-            aria-haspopup="dialog"
-            data-title="WorldAtlas"
-            data-tag="Live"
-            data-description="Interactive country explorer with live REST Countries API data, search, filters, and country details. Includes region filtering, a responsive grid layout, and a detail view with population, currencies, and borders."
-            data-tags="React,REST API,Netlify"
-            data-live="https://worldatlas-website.netlify.app"
-            data-github="https://github.com/MuhammadMuzammil-TheDeveloper"
-          >
-            <div class="project-top"><span>Live</span><b>↗</b></div>
-            <h3>WorldAtlas</h3>
-            <p>
-              Interactive country explorer with live REST Countries API data,
-              search, filters, and country details.
-            </p>
-            <div class="tags"><i>React</i><i>REST API</i><i>Netlify</i></div>
-          </article>
-          <article
-            class="project-card js-project-card"
-            tabindex="0"
-            role="button"
-            aria-haspopup="dialog"
-            data-title="AI Quiz Platform"
-            data-tag="Live"
-            data-description="Quiz application with category selection, timed rounds, score tracking, and clean result screens. Built for quick replayability with per-category difficulty and a shareable results summary."
-            data-tags="JavaScript,CSS,Netlify"
-            data-live="https://quizapplicationmuzammil.netlify.app"
-            data-github="https://github.com/MuhammadMuzammil-TheDeveloper"
-          >
-            <div class="project-top"><span>Live</span><b>↗</b></div>
-            <h3>AI Quiz Platform</h3>
-            <p>
-              Quiz application with category selection, timed rounds, score
-              tracking, and clean result screens.
-            </p>
-            <div class="tags"><i>JavaScript</i><i>CSS</i><i>Netlify</i></div>
-          </article>
         </div>
+
         <div class="live-projects">
           <div>
             <small>Live deployments</small>
@@ -599,6 +527,9 @@
       </div>
     </div>
 
+    <script src="./projects-data.js"></script>
+    <script src="./project-render.js"></script>
+    <script src="./home-projects.js"></script>
     <script src="./script.js" defer></script>
   </body>
 </html>

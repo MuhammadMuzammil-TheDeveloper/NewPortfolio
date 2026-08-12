@@ -50,6 +50,7 @@ button {
 .container {
   max-width: var(--max);
   margin: auto;
+  padding-top: 10px;
   padding-left: 28px;
   padding-right: 28px;
 }
@@ -1281,7 +1282,9 @@ footer {
   border-radius: 10px;
   padding: 11px 13px;
   color: #fff;
-  font: 14px/1.5 Inter, sans-serif;
+  font:
+    14px/1.5 Inter,
+    sans-serif;
   resize: vertical;
   transition: border-color 0.25s;
 }
